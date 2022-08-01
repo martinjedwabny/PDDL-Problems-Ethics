@@ -7,7 +7,6 @@
 
     (:constants
         agent - car
-        left straight right stop - direction
     )
 
     (:predicates
