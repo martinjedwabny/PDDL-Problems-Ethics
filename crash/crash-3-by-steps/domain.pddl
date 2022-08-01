@@ -1,5 +1,5 @@
 (define (domain crash-d)
-    (:requirements :adl)
+    (:requirements :adl :typing)
 
     (:types
         car lane altitude direction - object
