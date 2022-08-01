@@ -1,0 +1,11 @@
+;;!domain: crash-d
+;;!problem: crash-p-01
+
+(go )
+(updatecrashes )
+(go )
+(updatecrashes )
+(go )
+(updatecrashes )
+(go )
+; cost = 7 (unit cost)
