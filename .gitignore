@@ -1,3 +1,5 @@
 run_notes.txt
 planner.sh
 *.1
+clingo
+plasp-planner.sh

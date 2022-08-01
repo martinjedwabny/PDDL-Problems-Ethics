@@ -4,8 +4,6 @@
         c1 c2 - car
         l1 l2 - lane
         a1 a2 a3 a4 - altitude
-        left straight right - direction
-        zero normal double - speed
     )
     (:init
         (updatedCrashes)
@@ -16,7 +14,7 @@
 
         (hasPosition agent l1 a1)
         (hasPosition c1 l2 a1)
-        (hasPosition c2 l2 a3)
+        (hasPosition c2 l2 a1)
 
         (hasDirection agent straight)
         (hasDirection c1 straight)
@@ -37,15 +35,14 @@
         (nextAltitude stop a2 a2)
         (nextAltitude stop a3 a3)
         (nextAltitude stop a4 a4)
-        (nextAltitude straight a1 a2)
-        (nextAltitude straight a2 a3)
-        (nextAltitude straight a3 a4)
-        (nextAltitude left a1 a2)
-        (nextAltitude left a2 a3)
-        (nextAltitude left a3 a4)
-        (nextAltitude right a1 a2)
-        (nextAltitude right a2 a3)
-        (nextAltitude right a3 a4)
+        (nextAltitude normal a1 a2)
+        (nextAltitude normal a2 a3)
+        (nextAltitude normal a3 a4)
+        (nextAltitude normal a4 a4)
+        (nextAltitude fast a1 a3)
+        (nextAltitude fast a2 a4)
+        (nextAltitude fast a3 a4)
+        (nextAltitude fast a4 a4)
     )
 
     (:goal
