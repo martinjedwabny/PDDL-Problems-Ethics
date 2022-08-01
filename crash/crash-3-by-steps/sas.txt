@@ -1,0 +1,658 @@
+begin_version
+3
+end_version
+begin_metric
+0
+end_metric
+37
+begin_variable
+var0
+-1
+2
+Atom updatedcrashes()
+NegatedAtom updatedcrashes()
+end_variable
+begin_variable
+var1
+-1
+2
+Atom hasposition(c1, l2, a5)
+NegatedAtom hasposition(c1, l2, a5)
+end_variable
+begin_variable
+var2
+-1
+4
+Atom hasdirection(agent, left)
+Atom hasdirection(agent, right)
+Atom hasdirection(agent, stop)
+Atom hasdirection(agent, straight)
+end_variable
+begin_variable
+var3
+-1
+2
+Atom hasposition(c2, l1, a3)
+NegatedAtom hasposition(c2, l1, a3)
+end_variable
+begin_variable
+var4
+-1
+2
+Atom hasposition(c2, l2, a3)
+NegatedAtom hasposition(c2, l2, a3)
+end_variable
+begin_variable
+var5
+-1
+2
+Atom hasposition(c2, l3, a1)
+NegatedAtom hasposition(c2, l3, a1)
+end_variable
+begin_variable
+var6
+-1
+2
+Atom hasposition(c1, l1, a1)
+NegatedAtom hasposition(c1, l1, a1)
+end_variable
+begin_variable
+var7
+-1
+2
+Atom hasposition(c1, l2, a3)
+NegatedAtom hasposition(c1, l2, a3)
+end_variable
+begin_variable
+var8
+-1
+2
+Atom hasposition(c1, l2, a4)
+NegatedAtom hasposition(c1, l2, a4)
+end_variable
+begin_variable
+var9
+-1
+2
+Atom hasposition(c2, l1, a5)
+NegatedAtom hasposition(c2, l1, a5)
+end_variable
+begin_variable
+var10
+-1
+2
+Atom hasposition(c2, l2, a5)
+NegatedAtom hasposition(c2, l2, a5)
+end_variable
+begin_variable
+var11
+-1
+2
+Atom hasposition(c2, l3, a5)
+NegatedAtom hasposition(c2, l3, a5)
+end_variable
+begin_variable
+var12
+-1
+2
+Atom hasposition(c2, l1, a4)
+NegatedAtom hasposition(c2, l1, a4)
+end_variable
+begin_variable
+var13
+-1
+2
+Atom hasposition(c2, l2, a4)
+NegatedAtom hasposition(c2, l2, a4)
+end_variable
+begin_variable
+var14
+-1
+2
+Atom hasposition(c2, l3, a2)
+NegatedAtom hasposition(c2, l3, a2)
+end_variable
+begin_variable
+var15
+-1
+2
+Atom hasposition(c1, l2, a2)
+NegatedAtom hasposition(c1, l2, a2)
+end_variable
+begin_variable
+var16
+-1
+2
+Atom hasposition(c2, l3, a3)
+NegatedAtom hasposition(c2, l3, a3)
+end_variable
+begin_variable
+var17
+-1
+2
+Atom hasposition(c1, l3, a3)
+NegatedAtom hasposition(c1, l3, a3)
+end_variable
+begin_variable
+var18
+-1
+2
+Atom hasposition(c2, l3, a4)
+NegatedAtom hasposition(c2, l3, a4)
+end_variable
+begin_variable
+var19
+-1
+2
+Atom hasposition(c1, l3, a5)
+NegatedAtom hasposition(c1, l3, a5)
+end_variable
+begin_variable
+var20
+-1
+2
+Atom hasposition(c1, l3, a4)
+NegatedAtom hasposition(c1, l3, a4)
+end_variable
+begin_variable
+var21
+-1
+2
+Atom hasposition(agent, l2, a1)
+NegatedAtom hasposition(agent, l2, a1)
+end_variable
+begin_variable
+var22
+-1
+2
+Atom hasposition(agent, l1, a5)
+NegatedAtom hasposition(agent, l1, a5)
+end_variable
+begin_variable
+var23
+-1
+2
+Atom hasposition(agent, l2, a5)
+NegatedAtom hasposition(agent, l2, a5)
+end_variable
+begin_variable
+var24
+-1
+2
+Atom hasposition(agent, l1, a2)
+NegatedAtom hasposition(agent, l1, a2)
+end_variable
+begin_variable
+var25
+-1
+2
+Atom hasposition(agent, l2, a2)
+NegatedAtom hasposition(agent, l2, a2)
+end_variable
+begin_variable
+var26
+-1
+2
+Atom hasposition(agent, l3, a2)
+NegatedAtom hasposition(agent, l3, a2)
+end_variable
+begin_variable
+var27
+-1
+2
+Atom hasposition(agent, l1, a3)
+NegatedAtom hasposition(agent, l1, a3)
+end_variable
+begin_variable
+var28
+-1
+2
+Atom hasposition(agent, l3, a3)
+NegatedAtom hasposition(agent, l3, a3)
+end_variable
+begin_variable
+var29
+-1
+2
+Atom hasposition(agent, l2, a3)
+NegatedAtom hasposition(agent, l2, a3)
+end_variable
+begin_variable
+var30
+-1
+2
+Atom hasposition(agent, l1, a4)
+NegatedAtom hasposition(agent, l1, a4)
+end_variable
+begin_variable
+var31
+-1
+2
+Atom hasposition(agent, l3, a4)
+NegatedAtom hasposition(agent, l3, a4)
+end_variable
+begin_variable
+var32
+-1
+2
+Atom hasposition(agent, l2, a4)
+NegatedAtom hasposition(agent, l2, a4)
+end_variable
+begin_variable
+var33
+-1
+2
+Atom hascrashed(c1)
+NegatedAtom hascrashed(c1)
+end_variable
+begin_variable
+var34
+-1
+2
+Atom hascrashed(c2)
+NegatedAtom hascrashed(c2)
+end_variable
+begin_variable
+var35
+-1
+2
+Atom hasposition(agent, l3, a5)
+NegatedAtom hasposition(agent, l3, a5)
+end_variable
+begin_variable
+var36
+-1
+2
+Atom hascrashed(agent)
+NegatedAtom hascrashed(agent)
+end_variable
+0
+begin_state
+0
+1
+3
+1
+1
+0
+0
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+0
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+end_state
+begin_goal
+2
+35 0
+36 1
+end_goal
+14
+begin_operator
+changedirection left right
+1
+0 0
+1
+0 2 0 1
+1
+end_operator
+begin_operator
+changedirection left stop
+1
+0 0
+1
+0 2 0 2
+1
+end_operator
+begin_operator
+changedirection left straight
+1
+0 0
+1
+0 2 0 3
+1
+end_operator
+begin_operator
+changedirection right left
+1
+0 0
+1
+0 2 1 0
+1
+end_operator
+begin_operator
+changedirection right stop
+1
+0 0
+1
+0 2 1 2
+1
+end_operator
+begin_operator
+changedirection right straight
+1
+0 0
+1
+0 2 1 3
+1
+end_operator
+begin_operator
+changedirection stop left
+1
+0 0
+1
+0 2 2 0
+1
+end_operator
+begin_operator
+changedirection stop right
+1
+0 0
+1
+0 2 2 1
+1
+end_operator
+begin_operator
+changedirection stop straight
+1
+0 0
+1
+0 2 2 3
+1
+end_operator
+begin_operator
+changedirection straight left
+1
+0 0
+1
+0 2 3 0
+1
+end_operator
+begin_operator
+changedirection straight right
+1
+0 0
+1
+0 2 3 1
+1
+end_operator
+begin_operator
+changedirection straight stop
+1
+0 0
+1
+0 2 3 2
+1
+end_operator
+begin_operator
+go 
+0
+142
+3 36 1 2 0 21 0 24 -1 0
+3 36 1 2 2 24 0 24 -1 0
+4 36 1 2 0 24 0 21 1 24 -1 1
+3 36 1 2 1 24 0 24 -1 1
+4 36 1 2 1 24 0 21 1 24 -1 1
+3 36 1 2 3 24 0 24 -1 1
+4 36 1 2 3 24 0 21 1 24 -1 1
+3 36 1 2 0 24 0 27 -1 0
+3 36 1 2 0 25 0 27 -1 0
+3 36 1 2 2 27 0 27 -1 0
+3 36 1 2 3 24 0 27 -1 0
+5 36 1 2 0 24 1 27 0 25 1 27 -1 1
+4 36 1 2 1 24 1 27 0 27 -1 1
+5 36 1 2 1 24 1 27 0 25 1 27 -1 1
+3 36 1 2 1 27 0 27 -1 1
+4 36 1 2 1 27 0 25 1 27 -1 1
+4 36 1 2 3 24 1 27 0 27 -1 1
+5 36 1 2 3 24 1 27 0 25 1 27 -1 1
+3 36 1 2 0 27 0 30 -1 0
+3 36 1 2 0 29 0 30 -1 0
+3 36 1 2 2 30 0 30 -1 0
+3 36 1 2 3 27 0 30 -1 0
+5 36 1 2 0 27 1 30 0 29 1 30 -1 1
+4 36 1 2 1 27 1 30 0 30 -1 1
+5 36 1 2 1 27 1 30 0 29 1 30 -1 1
+3 36 1 2 1 30 0 30 -1 1
+4 36 1 2 1 30 0 29 1 30 -1 1
+4 36 1 2 3 27 1 30 0 30 -1 1
+5 36 1 2 3 27 1 30 0 29 1 30 -1 1
+3 36 1 2 0 30 0 22 -1 0
+3 36 1 2 0 32 0 22 -1 0
+3 36 1 2 2 22 0 22 -1 0
+3 36 1 2 3 30 0 22 -1 0
+3 36 1 2 2 21 0 21 -1 0
+3 36 1 2 0 21 0 21 -1 1
+3 36 1 2 1 21 0 21 -1 1
+3 36 1 2 3 21 0 21 -1 1
+3 36 1 2 2 25 0 25 -1 0
+3 36 1 2 3 21 0 25 -1 0
+4 36 1 2 0 21 1 25 0 25 -1 1
+3 36 1 2 0 25 0 25 -1 1
+4 36 1 2 1 21 1 25 0 25 -1 1
+3 36 1 2 1 25 0 25 -1 1
+4 36 1 2 3 21 1 25 0 25 -1 1
+3 36 1 2 0 26 0 29 -1 0
+3 36 1 2 1 24 0 29 -1 0
+3 36 1 2 2 29 0 29 -1 0
+3 36 1 2 3 25 0 29 -1 0
+6 36 1 2 0 24 1 25 1 29 0 26 1 29 -1 1
+5 36 1 2 0 24 1 29 0 26 1 29 -1 1
+5 36 1 2 0 25 1 29 0 26 1 29 -1 1
+4 36 1 2 0 29 0 26 1 29 -1 1
+5 36 1 2 1 24 1 25 1 29 0 29 -1 1
+6 36 1 2 1 24 1 25 1 29 0 26 1 29 -1 1
+4 36 1 2 1 24 1 29 0 29 -1 1
+5 36 1 2 1 24 1 29 0 26 1 29 -1 1
+5 36 1 2 3 24 1 25 1 29 0 29 -1 1
+6 36 1 2 3 24 1 25 1 29 0 26 1 29 -1 1
+4 36 1 2 3 25 1 29 0 29 -1 1
+5 36 1 2 3 25 1 29 0 26 1 29 -1 1
+3 36 1 2 0 28 0 32 -1 0
+3 36 1 2 1 27 0 32 -1 0
+3 36 1 2 2 32 0 32 -1 0
+3 36 1 2 3 29 0 32 -1 0
+6 36 1 2 0 27 1 29 1 32 0 28 1 32 -1 1
+5 36 1 2 0 27 1 32 0 28 1 32 -1 1
+5 36 1 2 0 29 1 32 0 28 1 32 -1 1
+4 36 1 2 0 32 0 28 1 32 -1 1
+5 36 1 2 1 27 1 29 1 32 0 32 -1 1
+6 36 1 2 1 27 1 29 1 32 0 28 1 32 -1 1
+4 36 1 2 1 27 1 32 0 32 -1 1
+5 36 1 2 1 27 1 32 0 28 1 32 -1 1
+5 36 1 2 3 27 1 29 1 32 0 32 -1 1
+6 36 1 2 3 27 1 29 1 32 0 28 1 32 -1 1
+4 36 1 2 3 29 1 32 0 32 -1 1
+5 36 1 2 3 29 1 32 0 28 1 32 -1 1
+3 36 1 2 0 31 0 23 -1 0
+3 36 1 2 1 30 0 23 -1 0
+3 36 1 2 2 23 0 23 -1 0
+3 36 1 2 3 32 0 23 -1 0
+3 36 1 2 1 21 0 26 -1 0
+3 36 1 2 2 26 0 26 -1 0
+4 36 1 2 0 21 1 26 0 26 -1 1
+3 36 1 2 0 26 0 26 -1 1
+4 36 1 2 1 21 1 26 0 26 -1 1
+4 36 1 2 3 21 1 26 0 26 -1 1
+3 36 1 2 3 26 0 26 -1 1
+3 36 1 2 1 25 0 28 -1 0
+3 36 1 2 1 26 0 28 -1 0
+3 36 1 2 2 28 0 28 -1 0
+3 36 1 2 3 26 0 28 -1 0
+5 36 1 2 0 25 1 26 1 28 0 28 -1 1
+4 36 1 2 0 25 1 28 0 28 -1 1
+4 36 1 2 0 26 1 28 0 28 -1 1
+3 36 1 2 0 28 0 28 -1 1
+5 36 1 2 1 25 1 26 1 28 0 28 -1 1
+5 36 1 2 3 25 1 26 1 28 0 28 -1 1
+4 36 1 2 3 26 1 28 0 28 -1 1
+3 36 1 2 1 29 0 31 -1 0
+3 36 1 2 1 28 0 31 -1 0
+3 36 1 2 2 31 0 31 -1 0
+3 36 1 2 3 28 0 31 -1 0
+5 36 1 2 0 29 1 28 1 31 0 31 -1 1
+4 36 1 2 0 29 1 31 0 31 -1 1
+4 36 1 2 0 28 1 31 0 31 -1 1
+3 36 1 2 0 31 0 31 -1 1
+5 36 1 2 1 29 1 28 1 31 0 31 -1 1
+5 36 1 2 3 29 1 28 1 31 0 31 -1 1
+4 36 1 2 3 28 1 31 0 31 -1 1
+3 36 1 2 1 32 0 35 -1 0
+3 36 1 2 1 31 0 35 -1 0
+3 36 1 2 2 35 0 35 -1 0
+3 36 1 2 3 31 0 35 -1 0
+1 33 1 6 -1 1
+2 33 1 6 0 15 -1 0
+3 33 1 6 1 15 0 15 -1 1
+2 33 1 7 0 7 -1 1
+2 33 1 8 0 8 -1 1
+2 33 1 15 0 17 -1 0
+3 33 1 15 1 17 0 17 -1 1
+2 33 1 7 0 20 -1 0
+2 33 1 17 0 20 -1 0
+4 33 1 7 1 17 1 20 0 20 -1 1
+2 33 1 8 0 19 -1 0
+2 33 1 20 0 19 -1 0
+2 34 1 3 0 3 -1 1
+2 34 1 3 0 12 -1 0
+3 34 1 3 1 12 0 12 -1 1
+2 34 1 12 0 9 -1 0
+2 34 1 4 0 4 -1 1
+2 34 1 4 0 13 -1 0
+3 34 1 4 1 13 0 13 -1 1
+2 34 1 13 0 10 -1 0
+1 34 1 5 -1 1
+2 34 1 5 0 14 -1 0
+3 34 1 5 1 14 0 14 -1 1
+2 34 1 14 0 16 -1 0
+3 34 1 14 1 16 0 16 -1 1
+2 34 1 16 0 18 -1 0
+3 34 1 16 1 18 0 18 -1 1
+2 34 1 18 0 11 -1 0
+0 0 0 1
+1
+end_operator
+begin_operator
+updatecrashes 
+0
+93
+3 33 1 25 0 15 0 36 -1 0
+3 33 1 29 0 7 0 36 -1 0
+3 33 1 32 0 8 0 36 -1 0
+3 33 1 23 0 1 0 36 -1 0
+3 33 1 28 0 17 0 36 -1 0
+3 33 1 31 0 20 0 36 -1 0
+3 33 1 35 0 19 0 36 -1 0
+3 34 1 27 0 3 0 36 -1 0
+3 34 1 30 0 12 0 36 -1 0
+3 34 1 22 0 9 0 36 -1 0
+3 34 1 29 0 4 0 36 -1 0
+3 34 1 32 0 13 0 36 -1 0
+3 34 1 23 0 10 0 36 -1 0
+3 34 1 26 0 14 0 36 -1 0
+3 34 1 28 0 16 0 36 -1 0
+3 34 1 31 0 18 0 36 -1 0
+3 34 1 35 0 11 0 36 -1 0
+2 27 0 3 0 36 -1 0
+2 30 0 12 0 36 -1 0
+2 22 0 9 0 36 -1 0
+2 25 0 15 0 36 -1 0
+2 29 0 7 0 36 -1 0
+2 29 0 4 0 36 -1 0
+2 32 0 8 0 36 -1 0
+2 32 0 13 0 36 -1 0
+2 23 0 1 0 36 -1 0
+2 23 0 10 0 36 -1 0
+2 26 0 14 0 36 -1 0
+2 28 0 17 0 36 -1 0
+2 28 0 16 0 36 -1 0
+2 31 0 20 0 36 -1 0
+2 31 0 18 0 36 -1 0
+2 35 0 19 0 36 -1 0
+2 35 0 11 0 36 -1 0
+3 36 1 25 0 15 0 33 -1 0
+3 36 1 29 0 7 0 33 -1 0
+3 36 1 32 0 8 0 33 -1 0
+3 36 1 23 0 1 0 33 -1 0
+3 36 1 28 0 17 0 33 -1 0
+3 36 1 31 0 20 0 33 -1 0
+3 36 1 35 0 19 0 33 -1 0
+3 34 1 7 0 4 0 33 -1 0
+3 34 1 8 0 13 0 33 -1 0
+3 34 1 1 0 10 0 33 -1 0
+3 34 1 17 0 16 0 33 -1 0
+3 34 1 20 0 18 0 33 -1 0
+3 34 1 19 0 11 0 33 -1 0
+2 25 0 15 0 33 -1 0
+2 29 0 7 0 33 -1 0
+2 32 0 8 0 33 -1 0
+2 23 0 1 0 33 -1 0
+2 28 0 17 0 33 -1 0
+2 31 0 20 0 33 -1 0
+2 35 0 19 0 33 -1 0
+2 7 0 4 0 33 -1 0
+2 8 0 13 0 33 -1 0
+2 1 0 10 0 33 -1 0
+2 17 0 16 0 33 -1 0
+2 20 0 18 0 33 -1 0
+2 19 0 11 0 33 -1 0
+3 36 1 27 0 3 0 34 -1 0
+3 36 1 30 0 12 0 34 -1 0
+3 36 1 22 0 9 0 34 -1 0
+3 36 1 29 0 4 0 34 -1 0
+3 36 1 32 0 13 0 34 -1 0
+3 36 1 23 0 10 0 34 -1 0
+3 36 1 26 0 14 0 34 -1 0
+3 36 1 28 0 16 0 34 -1 0
+3 36 1 31 0 18 0 34 -1 0
+3 36 1 35 0 11 0 34 -1 0
+3 33 1 7 0 4 0 34 -1 0
+3 33 1 8 0 13 0 34 -1 0
+3 33 1 1 0 10 0 34 -1 0
+3 33 1 17 0 16 0 34 -1 0
+3 33 1 20 0 18 0 34 -1 0
+3 33 1 19 0 11 0 34 -1 0
+2 27 0 3 0 34 -1 0
+2 30 0 12 0 34 -1 0
+2 22 0 9 0 34 -1 0
+2 29 0 4 0 34 -1 0
+2 32 0 13 0 34 -1 0
+2 23 0 10 0 34 -1 0
+2 26 0 14 0 34 -1 0
+2 28 0 16 0 34 -1 0
+2 31 0 18 0 34 -1 0
+2 35 0 11 0 34 -1 0
+2 7 0 4 0 34 -1 0
+2 8 0 13 0 34 -1 0
+2 1 0 10 0 34 -1 0
+2 17 0 16 0 34 -1 0
+2 20 0 18 0 34 -1 0
+2 19 0 11 0 34 -1 0
+0 0 1 0
+1
+end_operator
+0
