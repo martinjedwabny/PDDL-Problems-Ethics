@@ -1,0 +1,13 @@
+;;!domain: crash-d
+;;!problem: crash-p-01
+
+(setdirection left)
+(go )
+(updatecrashes )
+(setdirection right)
+(go )
+(updatecrashes )
+(go )
+(updatecrashes )
+(go )
+; cost = 9 (unit cost)
