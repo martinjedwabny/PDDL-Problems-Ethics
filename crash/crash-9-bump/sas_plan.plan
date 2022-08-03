@@ -2,10 +2,10 @@
 ;;!problem: crash-p-01
 
 (go )
-(updatecrashes )
+(update )
 (go )
-(updatecrashes )
+(update )
 (go )
-(updatecrashes )
+(update )
 (go )
 ; cost = 7 (unit cost)

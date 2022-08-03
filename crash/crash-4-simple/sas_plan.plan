@@ -2,9 +2,9 @@
 ;;!problem: crash-p-01
 
 (go )
-(updatecrashes )
+(update )
 (go )
-(updatecrashes )
+(update )
 (changedirection straight right)
 (go )
 ; cost = 6 (unit cost)

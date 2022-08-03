@@ -12,29 +12,29 @@
     )
 
     (:predicates
-        (isEqual ?C1 - car ?C2 - car)
-        (hasPosition ?C1 - car ?L1 - lane ?A1 - altitude)
-        (hasDirection ?C1 - car ?D1 - direction)
+        (equal ?C1 - car ?C2 - car)
+        (hasPos ?C1 - car ?L1 - lane ?A1 - altitude)
+        (hasDir ?C1 - car ?D1 - direction)
         (hasSpeed ?C1 - car ?S1 - speed)
-        (nextLane ?D1 - direction ?L1 - lane ?L2 - lane)
-        (nextAltitude ?S1 - speed ?A1 - altitude ?A2 - altitude)
+        (nextX ?D1 - direction ?L1 - lane ?L2 - lane)
+        (nextY ?S1 - speed ?A1 - altitude ?A2 - altitude)
         (hasCrashed ?C1 - car)
-        (updatedCrashes)
+        (updated)
     )
 
     (:action changeDirection
         :parameters (?D1 - direction)
-        :precondition (updatedCrashes)
+        :precondition (updated)
         :effect (and
-            (not (hasDirection agent left))
-            (not (hasDirection agent right))
-            (not (hasDirection agent straight))
-            (hasDirection agent ?D1))
+            (not (hasDir agent left))
+            (not (hasDir agent right))
+            (not (hasDir agent straight))
+            (hasDir agent ?D1))
     )
 
     ; (:action changeSpeed
     ;     :parameters (?S1 - speed)
-    ;     :precondition (updatedCrashes)
+    ;     :precondition (updated)
     ;     :effect (and
     ;         (not (hasSpeed agent stop))
     ;         (not (hasSpeed agent normal))
@@ -45,36 +45,36 @@
     ; (:action changeDirection
     ;     :parameters (?D1 - direction ?D2 - direction)
     ;     :precondition (and
-    ;         (updatedCrashes)
-    ;         (hasDirection agent ?D1))
+    ;         (updated)
+    ;         (hasDir agent ?D1))
     ;     :effect (and
-    ;         (not (hasDirection agent ?D1))
-    ;         (hasDirection agent ?D2))
+    ;         (not (hasDir agent ?D1))
+    ;         (hasDir agent ?D2))
     ; )
 
     ; (:action changeSpeed
     ;     :parameters (?S1 - speed ?S2 - speed)
     ;     :precondition (and
-    ;         (updatedCrashes)
+    ;         (updated)
     ;         (hasSpeed agent ?S1))
     ;     :effect (and
     ;         (not (hasSpeed agent ?S1))
     ;         (hasSpeed agent ?S2))
     ; )
 
-    (:action updateCrashes
+    (:action update
         :parameters ()
-        :precondition (not (updatedCrashes))
+        :precondition (not (updated))
         :effect (and
-            (updatedCrashes)
+            (updated)
             (forall
                 (?C1 - car ?C2 - car ?A1 - altitude ?L1 - lane)
                 (when
                     (and
-                        (not (isEqual ?C1 ?C2))
+                        (not (equal ?C1 ?C2))
                         (not (hasCrashed ?C1))
-                        (hasPosition ?C1 ?L1 ?A1)
-                        (hasPosition ?C2 ?L1 ?A1))
+                        (hasPos ?C1 ?L1 ?A1)
+                        (hasPos ?C2 ?L1 ?A1))
                     (and
                         (hasCrashed ?C1)
                         (hasCrashed ?C2)
@@ -83,22 +83,22 @@
 
     (:action go
         :parameters ()
-        :precondition (updatedCrashes)
+        :precondition (updated)
         :effect (and
-            (not (updatedCrashes))
+            (not (updated))
             (forall
                 (?C1 - car ?D1 - direction ?S1 - speed ?A1 - altitude ?A2 - altitude ?L1 - lane ?L2 - lane)
                 (when
                     (and
                         (not (hasCrashed ?C1))
-                        (hasPosition ?C1 ?L1 ?A1)
-                        (hasDirection ?C1 ?D1)
+                        (hasPos ?C1 ?L1 ?A1)
+                        (hasDir ?C1 ?D1)
                         (hasSpeed ?C1 ?S1)
-                        (nextLane ?D1 ?L1 ?L2)
-                        (nextAltitude ?S1 ?A1 ?A2))
+                        (nextX ?D1 ?L1 ?L2)
+                        (nextY ?S1 ?A1 ?A2))
                     (and
-                        (not (hasPosition ?C1 ?L1 ?A1))
-                        (hasPosition ?C1 ?L2 ?A2))))
+                        (not (hasPos ?C1 ?L1 ?A1))
+                        (hasPos ?C1 ?L2 ?A2))))
         )
     )
 )
