@@ -20,7 +20,7 @@
         (updated)
     )
 
-    (:action setDirection
+    (:action setDir
         :parameters (?D1 - direction)
         :precondition (updated)
         :effect (and

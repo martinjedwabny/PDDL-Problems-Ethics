@@ -1,16 +1,12 @@
 ;;!domain: crash-d
 ;;!problem: crash-p-01
 
-(setstop )
+(setDir right)
 (go )
 (update )
 (setDir left)
 (go )
 (update )
-(go )
-(update )
 (setDir right)
 (go )
 (update )
-(go )
-; cost = 12 (unit cost)

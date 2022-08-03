@@ -1,10 +1,10 @@
 ;;!domain: crash-d
 ;;!problem: crash-p-01
 
-(setdirection left)
+(setDir left)
 (go )
 (update )
-(setdirection right)
+(setDir right)
 (go )
 (update )
 (go )
