@@ -1,5 +1,5 @@
 (define (domain crash-d)
-    (:requirements :adl)
+    (:requirements :strips :typing :negative-preconditions :conditional-effects)
 
     (:types
         car lane altitude direction - object
