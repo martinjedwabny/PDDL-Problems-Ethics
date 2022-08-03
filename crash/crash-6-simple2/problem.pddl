@@ -34,7 +34,6 @@
     )
 
     (:goal
-        (and (hasPos agent l2 a4)
-            (not (hasCrashed agent)))
+        (and (updated) (hasPos agent l2 a4) (not (hasCrashed agent)))
     )
 )
