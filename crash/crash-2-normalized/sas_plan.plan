@@ -1,8 +1,8 @@
 ;;!domain: crash-d
 ;;!problem: crash-p-01
 
-(go left l2 a1 l1 a2)
-(go right l1 a2 l2 a3)
-(go right l2 a3 l3 a4)
-(takeexit l3 a4 exit a5)
+(go left x2 y1 x1 y2)
+(go right x1 y2 x2 y3)
+(go right x2 y3 x3 y4)
+(takeexit x3 y4 exit y5)
 ; cost = 4 (unit cost)

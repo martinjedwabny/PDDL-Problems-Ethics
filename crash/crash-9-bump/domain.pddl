@@ -2,7 +2,7 @@
     (:requirements :adl)
 
     (:types
-        car lane altitude direction - object
+        car xPos yPos direction - object
     )
 
     (:constants
@@ -12,10 +12,10 @@
 
     (:predicates
         (equal ?C1 - car ?C2 - car)
-        (hasPos ?C - car ?L - lane ?A - altitude)
+        (hasPos ?C - car ?X1 - xPos ?Y1 - yPos)
         (hasDir ?C - car ?D - direction)
-        (nextX ?D - direction ?L1 - lane ?L2 - lane)
-        (nextY ?A1 - altitude ?A2 - altitude)
+        (nextX ?D - direction ?X1 - xPos ?X2 - xPos)
+        (nextY ?Y1 - yPos ?Y2 - yPos)
         (hasCrashed ?C1 - car)
         (hasBumped ?C1 - car)
         (updated)
@@ -46,26 +46,26 @@
         :effect (and
             (updated)
             (forall
-                (?C1 - car ?C2 - car ?A1 - altitude ?L1 - lane)
+                (?C1 - car ?C2 - car ?Y1 - yPos ?X1 - xPos)
                 (when
                     (and
                         (not (equal ?C1 ?C2))
                         (not (equal ?C1 agent))
                         (not (equal ?C2 agent))
                         (not (hasCrashed ?C1))
-                        (hasPos ?C1 ?L1 ?A1)
-                        (hasPos ?C2 ?L1 ?A1))
+                        (hasPos ?C1 ?X1 ?Y1)
+                        (hasPos ?C2 ?X1 ?Y1))
                     (and
                         (hasCrashed ?C1)
                         (hasCrashed ?C2)
                     )))
             (forall
-                (?C1 - car ?A1 - altitude ?L1 - lane)
+                (?C1 - car ?Y1 - yPos ?X1 - xPos)
                 (when
                     (and
                         (not (equal ?C1 agent))
-                        (hasPos agent ?L1 ?A1)
-                        (hasPos ?C1 ?L1 ?A1))
+                        (hasPos agent ?X1 ?Y1)
+                        (hasPos ?C1 ?X1 ?Y1))
                     (and
                         (hasBumped agent)
                         (hasBumped ?C1)
@@ -81,17 +81,17 @@
         :effect (and
             (not (updated))
             (forall
-                (?C1 - car ?D1 - direction ?A1 - altitude ?A2 - altitude ?L1 - lane ?L2 - lane)
+                (?C1 - car ?D1 - direction ?Y1 - yPos ?Y2 - yPos ?X1 - xPos ?X2 - xPos)
                 (when
                     (and
                         (not (hasCrashed ?C1))
-                        (hasPos ?C1 ?L1 ?A1)
+                        (hasPos ?C1 ?X1 ?Y1)
                         (hasDir ?C1 ?D1)
-                        (nextX ?D1 ?L1 ?L2)
-                        (nextY ?A1 ?A2))
+                        (nextX ?D1 ?X1 ?X2)
+                        (nextY ?Y1 ?Y2))
                     (and
-                        (not (hasPos ?C1 ?L1 ?A1))
-                        (hasPos ?C1 ?L2 ?A2))))
+                        (not (hasPos ?C1 ?X1 ?Y1))
+                        (hasPos ?C1 ?X2 ?Y2))))
         )
     )
 )

@@ -2,7 +2,7 @@
     (:requirements :adl)
 
     (:types
-        car lane altitude direction speed - object
+        car xPos yPos direction speed - object
     )
 
     (:constants
@@ -13,11 +13,11 @@
 
     (:predicates
         (equal ?C1 - car ?C2 - car)
-        (hasPos ?C1 - car ?L1 - lane ?A1 - altitude)
+        (hasPos ?C1 - car ?X1 - xPos ?Y1 - yPos)
         (hasDir ?C1 - car ?D1 - direction)
         (hasSpeed ?C1 - car ?S1 - speed)
-        (nextX ?D1 - direction ?L1 - lane ?L2 - lane)
-        (nextY ?S1 - speed ?A1 - altitude ?A2 - altitude)
+        (nextX ?D1 - direction ?X1 - xPos ?X2 - xPos)
+        (nextY ?S1 - speed ?Y1 - yPos ?Y2 - yPos)
         (hasCrashed ?C1 - car)
         (updated)
     )
@@ -68,13 +68,13 @@
         :effect (and
             (updated)
             (forall
-                (?C1 - car ?C2 - car ?A1 - altitude ?L1 - lane)
+                (?C1 - car ?C2 - car ?Y1 - yPos ?X1 - xPos)
                 (when
                     (and
                         (not (equal ?C1 ?C2))
                         (not (hasCrashed ?C1))
-                        (hasPos ?C1 ?L1 ?A1)
-                        (hasPos ?C2 ?L1 ?A1))
+                        (hasPos ?C1 ?X1 ?Y1)
+                        (hasPos ?C2 ?X1 ?Y1))
                     (and
                         (hasCrashed ?C1)
                         (hasCrashed ?C2)
@@ -87,18 +87,18 @@
         :effect (and
             (not (updated))
             (forall
-                (?C1 - car ?D1 - direction ?S1 - speed ?A1 - altitude ?A2 - altitude ?L1 - lane ?L2 - lane)
+                (?C1 - car ?D1 - direction ?S1 - speed ?Y1 - yPos ?Y2 - yPos ?X1 - xPos ?X2 - xPos)
                 (when
                     (and
                         (not (hasCrashed ?C1))
-                        (hasPos ?C1 ?L1 ?A1)
+                        (hasPos ?C1 ?X1 ?Y1)
                         (hasDir ?C1 ?D1)
                         (hasSpeed ?C1 ?S1)
-                        (nextX ?D1 ?L1 ?L2)
-                        (nextY ?S1 ?A1 ?A2))
+                        (nextX ?D1 ?X1 ?X2)
+                        (nextY ?S1 ?Y1 ?Y2))
                     (and
-                        (not (hasPos ?C1 ?L1 ?A1))
-                        (hasPos ?C1 ?L2 ?A2))))
+                        (not (hasPos ?C1 ?X1 ?Y1))
+                        (hasPos ?C1 ?X2 ?Y2))))
         )
     )
 )

@@ -2,8 +2,8 @@
     (:domain crash-d)
     (:objects
         c1 c2 - car
-        l1 l2 l3 - lane
-        a1 a2 a3 a4 a5 - altitude
+        x1 x2 x3 - xPos
+        y1 y2 y3 y4 y5 - yPos
     )
     (:init
         (updated)
@@ -12,33 +12,33 @@
         (equal c1 c1)
         (equal c2 c2)
 
-        (hasPos agent l3 a1)
-        (hasPos c1 l1 a1)
-        (hasPos c2 l2 a1)
+        (hasPos agent x3 y1)
+        (hasPos c1 x1 y1)
+        (hasPos c2 x2 y1)
 
         (hasDir agent straight)
         (hasDir c1 right)
         (hasDir c2 right)
 
-        (nextX straight l1 l1)
-        (nextX straight l2 l2)
-        (nextX straight l3 l3)
-        (nextX right l1 l2)
-        (nextX right l2 l3)
-        (nextX right l3 l3)
-        (nextX left l1 l1)
-        (nextX left l2 l1)
-        (nextX left l3 l2)
+        (nextX straight x1 x1)
+        (nextX straight x2 x2)
+        (nextX straight x3 x3)
+        (nextX right x1 x2)
+        (nextX right x2 x3)
+        (nextX right x3 x3)
+        (nextX left x1 x1)
+        (nextX left x2 x1)
+        (nextX left x3 x2)
 
-        (nextY a1 a2)
-        (nextY a2 a3)
-        (nextY a3 a4)
-        (nextY a4 a5)
-        (nextY a5 a5)
+        (nextY y1 y2)
+        (nextY y2 y3)
+        (nextY y3 y4)
+        (nextY y4 y5)
+        (nextY y5 y5)
     )
 
     (:goal
-        (and (updated) (hasPos agent l3 a5)
+        (and (updated) (hasPos agent x3 y5)
             (not (hasCrashed agent)))
     )
 )

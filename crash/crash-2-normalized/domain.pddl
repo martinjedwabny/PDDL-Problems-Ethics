@@ -2,7 +2,7 @@
     (:requirements :strips :typing :conditional-effects :negative-preconditions :derived-predicates)
 
     (:types
-        car lane altitude direction - object
+        car xPos yPos direction - object
     )
 
     (:constants
@@ -12,97 +12,97 @@
     (:predicates
         (equal ?C1 - car ?C2 - car)
         (isExternalCar ?C - car)
-        (hasPos ?C - car ?L - lane ?A - altitude)
+        (hasPos ?C - car ?X1 - xPos ?Y1 - yPos)
         (hasDir ?C - car ?D - direction)
-        (nextX ?D - direction ?L1 - lane ?L2 - lane)
-        (nextY ?A1 - altitude ?A2 - altitude)
-        (hasExit ?L1 - lane ?L2 - lane ?A - altitude)
-        (hasCrashed ?C1 - car ?C2 - car ?L - lane ?A - altitude)
+        (nextX ?D - direction ?X1 - xPos ?X2 - xPos)
+        (nextY ?Y1 - yPos ?Y2 - yPos)
+        (hasExit ?X1 - xPos ?X2 - xPos ?Y1 - yPos)
+        (hasCrashed ?C1 - car ?C2 - car ?X1 - xPos ?Y1 - yPos)
     )
 
     (:derived
-        (hasCrashed ?C1 - car ?C2 - car ?L - lane ?A - altitude)
+        (hasCrashed ?C1 - car ?C2 - car ?X1 - xPos ?Y1 - yPos)
         (and
             (not (equal ?C1 ?C2))
-            (hasPos ?C1 ?L ?A)
-            (hasPos ?C2 ?L ?A))
+            (hasPos ?C1 ?X1 ?Y1)
+            (hasPos ?C2 ?X1 ?Y1))
     )
 
     (:action go
-        :parameters (?D1 - direction ?L1 - lane ?A1 - altitude ?L2 - lane ?A2 - altitude)
+        :parameters (?D1 - direction ?X1 - xPos ?Y1 - yPos ?X2 - xPos ?Y2 - yPos)
         :precondition (and
             (forall
                 (?C1 - car)
-                (not (hasCrashed agent ?C1 ?L1 ?A1)))
-            (hasPos agent ?L1 ?A1)
-            (nextX ?D1 ?L1 ?L2)
-            (nextY ?A1 ?A2))
+                (not (hasCrashed agent ?C1 ?X1 ?Y1)))
+            (hasPos agent ?X1 ?Y1)
+            (nextX ?D1 ?X1 ?X2)
+            (nextY ?Y1 ?Y2))
         :effect (and
-            (not (hasPos agent ?L1 ?A1))
-            (hasPos agent ?L2 ?A2)
+            (not (hasPos agent ?X1 ?Y1))
+            (hasPos agent ?X2 ?Y2)
             (forall
-                (?C1 - car ?D2 - direction ?A3 - altitude ?A4 - altitude ?L3 - lane ?L4 - lane)
+                (?C1 - car ?D2 - direction ?Y3 - yPos ?Y4 - yPos ?X3 - xPos ?X4 - xPos)
                 (when
                     (and
                         (isExternalCar ?C1)
                         (forall
                             (?C2 - car)
-                            (not (hasCrashed ?C1 ?C2 ?L3 ?A3)))
-                        (hasPos ?C1 ?L3 ?A3)
+                            (not (hasCrashed ?C1 ?C2 ?X3 ?Y3)))
+                        (hasPos ?C1 ?X3 ?Y3)
                         (hasDir ?C1 ?D2)
-                        (nextX ?D2 ?L3 ?L4)
-                        (nextY ?A3 ?A4))
+                        (nextX ?D2 ?X3 ?X4)
+                        (nextY ?Y3 ?Y4))
                     (and
-                        (not (hasPos ?C1 ?L3 ?A3))
-                        (hasPos ?C1 ?L4 ?A4)))))
+                        (not (hasPos ?C1 ?X3 ?Y3))
+                        (hasPos ?C1 ?X4 ?Y4)))))
     )
 
     (:action stop
         :parameters ()
         :precondition ()
         :effect (forall
-            (?C1 - car ?D1 - direction ?A1 - altitude ?A2 - altitude ?L1 - lane ?L2 - lane)
+            (?C1 - car ?D1 - direction ?Y1 - yPos ?Y2 - yPos ?X1 - xPos ?X2 - xPos)
             (when
                 (and
                     (isExternalCar ?C1)
                     (forall
                         (?C2 - car)
-                        (not (hasCrashed ?C1 ?C2 ?L1 ?A1)))
+                        (not (hasCrashed ?C1 ?C2 ?X1 ?Y1)))
                     (hasDir ?C1 ?D1)
-                    (hasPos ?C1 ?L1 ?A1)
-                    (nextX ?D1 ?L1 ?L2)
-                    (nextY ?A1 ?A2))
+                    (hasPos ?C1 ?X1 ?Y1)
+                    (nextX ?D1 ?X1 ?X2)
+                    (nextY ?Y1 ?Y2))
                 (and
-                    (not (hasPos ?C1 ?L1 ?A1))
-                    (hasPos ?C1 ?L2 ?A2))))
+                    (not (hasPos ?C1 ?X1 ?Y1))
+                    (hasPos ?C1 ?X2 ?Y2))))
     )
 
     (:action takeExit
-        :parameters (?L1 - lane ?A1 - altitude ?L2 - lane ?A2 - altitude)
+        :parameters (?X1 - xPos ?Y1 - yPos ?X2 - xPos ?Y2 - yPos)
         :precondition (and
-            (not (hasCrashed agent c1 ?L1 ?A1))
-            (not (hasCrashed agent c2 ?L1 ?A1))
-            (hasPos agent ?L1 ?A1)
-            (hasExit ?L1 ?L2 ?A1)
-            (nextY ?A1 ?A2))
+            (not (hasCrashed agent c1 ?X1 ?Y1))
+            (not (hasCrashed agent c2 ?X1 ?Y1))
+            (hasPos agent ?X1 ?Y1)
+            (hasExit ?X1 ?X2 ?Y1)
+            (nextY ?Y1 ?Y2))
         :effect (and
-            (not (hasPos agent ?L1 ?A1))
-            (hasPos agent ?L2 ?A2)
+            (not (hasPos agent ?X1 ?Y1))
+            (hasPos agent ?X2 ?Y2)
             (forall
-                (?C1 - car ?D1 - direction ?A3 - altitude ?A4 - altitude ?L3 - lane ?L4 - lane)
+                (?C1 - car ?D1 - direction ?Y3 - yPos ?Y4 - yPos ?X3 - xPos ?X4 - xPos)
                 (when
                     (and
                         (isExternalCar ?C1)
                         (forall
                             (?C2 - car)
-                            (not (hasCrashed ?C1 ?C2 ?L3 ?A3)))
-                        (hasPos ?C1 ?L3 ?A3)
+                            (not (hasCrashed ?C1 ?C2 ?X3 ?Y3)))
+                        (hasPos ?C1 ?X3 ?Y3)
                         (hasDir ?C1 ?D1)
-                        (nextX ?D1 ?L3 ?L4)
-                        (nextY ?A3 ?A4))
+                        (nextX ?D1 ?X3 ?X4)
+                        (nextY ?Y3 ?Y4))
                     (and
-                        (not (hasPos ?C1 ?L3 ?A3))
-                        (hasPos ?C1 ?L4 ?A4))))
+                        (not (hasPos ?C1 ?X3 ?Y3))
+                        (hasPos ?C1 ?X4 ?Y4))))
         )
     )
 )

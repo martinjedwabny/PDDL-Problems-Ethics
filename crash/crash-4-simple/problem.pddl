@@ -2,8 +2,8 @@
     (:domain crash-d)
     (:objects
         c1 c2 - car
-        l1 l2 - lane
-        a1 a2 a3 a4 - altitude
+        x1 x2 - xPos
+        y1 y2 y3 y4 - yPos
         left straight right stop - direction
     )
     (:init
@@ -13,40 +13,40 @@
         (equal c1 c1)
         (equal c2 c2)
 
-        (hasPos agent l1 a1)
-        (hasPos c1 l2 a1)
-        (hasPos c2 l2 a3)
+        (hasPos agent x1 y1)
+        (hasPos c1 x2 y1)
+        (hasPos c2 x2 y3)
 
         (hasDir agent straight)
         (hasDir c1 straight)
         (hasDir c2 stop)
 
-        (nextX stop l1 l1)
-        (nextX stop l2 l2)
-        (nextX straight l1 l1)
-        (nextX straight l2 l2)
-        (nextX right l1 l2)
-        (nextX right l2 l2)
-        (nextX left l1 l1)
-        (nextX left l2 l1)
+        (nextX stop x1 x1)
+        (nextX stop x2 x2)
+        (nextX straight x1 x1)
+        (nextX straight x2 x2)
+        (nextX right x1 x2)
+        (nextX right x2 x2)
+        (nextX left x1 x1)
+        (nextX left x2 x1)
 
-        (nextY stop a1 a1)
-        (nextY stop a2 a2)
-        (nextY stop a3 a3)
-        (nextY stop a4 a4)
-        (nextY straight a1 a2)
-        (nextY straight a2 a3)
-        (nextY straight a3 a4)
-        (nextY left a1 a2)
-        (nextY left a2 a3)
-        (nextY left a3 a4)
-        (nextY right a1 a2)
-        (nextY right a2 a3)
-        (nextY right a3 a4)
+        (nextY stop y1 y1)
+        (nextY stop y2 y2)
+        (nextY stop y3 y3)
+        (nextY stop y4 y4)
+        (nextY straight y1 y2)
+        (nextY straight y2 y3)
+        (nextY straight y3 y4)
+        (nextY left y1 y2)
+        (nextY left y2 y3)
+        (nextY left y3 y4)
+        (nextY right y1 y2)
+        (nextY right y2 y3)
+        (nextY right y3 y4)
     )
 
     (:goal
-        (and (hasPos agent l2 a4)
+        (and (hasPos agent x2 y4)
             (not (hasCrashed agent)))
     )
 )

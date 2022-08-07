@@ -1,0 +1,7 @@
+;;!domain: hospital
+;;!problem: hospital-01
+
+(go house toll)
+(presentid a)
+(go toll highway)
+(go highway hospital)
